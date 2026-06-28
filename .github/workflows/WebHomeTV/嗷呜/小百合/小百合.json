@@ -1,0 +1,73 @@
+{
+    "sites": [
+ 
+        {
+            "key": "AI-JSON",
+            "name": "本地JSON源读取",
+            "type": 3, 
+            "api": "./py/本地json源读取.py",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 1,
+            "playerType": 2
+        },
+       {
+            "key": "AI-m3u",
+            "name": "本地M3U源读取",
+            "type": 3,
+           "api": "./py/本地M3U源读取.py",
+           "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 1,
+            "playerType": 2
+           },
+               {
+            "key": "AI-TXT",
+            "name": "本地TXT源读取",
+            "type": 3,
+            "api": "./py/本地TXT源读取.py",
+           "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 1,
+            "playerType": 2
+            },
+              {
+            "key": "AI-综合带图片",
+            "name": "本地综合源(有图)读取",
+            "type": 3,
+            "api": "./py/本地综合源(有图)读取.py",
+           "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 1,
+            "playerType": 2
+        },
+        {
+            //用编辑器打开(本地百合混放(有图)搜索.py)
+             //修改关键字，再打开ok影视 稍等可以看到你想要的视频清单
+            "key": "本地百合混放(有图)搜索",
+            "name": "本地百合混放(有图)搜索",
+            "type": 3,
+            "api": "./py/本地百合混放(有图)搜索.py",
+           "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 1,
+            "playerType": 2
+              },
+               {
+            "key": "AI-测试",
+           "name": "测试",
+            "type": 3, 
+            "api": "./py/测试.py",  
+            "searchable": 1,
+            "quickSearch": 1,          
+            "changeable": 1,
+            "playerType": 2
+        }
+
+        ]
+        }
