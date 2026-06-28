@@ -1,0 +1,31 @@
+{
+   "sites": [
+                   {
+            "key": "AI-腾讯",
+            "name": "腾讯",
+            "type": 3,
+            "api": "./本地/腾讯.py",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 2
+        },
+                        {
+            "key": "AI-腾讯",
+            "name": "短剧聚合",
+            "type": 3,
+            "api": "./本地/短剧聚合.py",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,
+            "changeable": 2
+        },
+": "enable-accurate-seek",
+
+      ]
+    }
+  ],
+  "ads": [
+    "static-mozai.4gtv.tv"
+  ]
+}
