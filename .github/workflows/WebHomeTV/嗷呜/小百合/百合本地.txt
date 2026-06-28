@@ -1,0 +1,5 @@
+
+{ "urls": [{ "url": "clan://localhost/tvbox/百合/百合.json", "name": "【百合】本地" },
+{ "url": "clan://localhost/tvbox/小百合/小百合.json", "name": "【小百合】本地" }]}
+
+
