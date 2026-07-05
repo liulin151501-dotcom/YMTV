@@ -1,0 +1,21 @@
+{
+  "spider": "./danmu-spider-native.jar",
+  "lives": [],
+  "sites": [
+    {
+      "key": "弹幕",
+      "name": "弹幕(测试)",
+      "type": 3,
+      "api": "csp_SecureDanmu",
+      "index": 1,
+      "ext": {
+        "apiUrls": [
+          "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
+          "https://logo.saodu.work:8888/87654321|公益源1",
+          "https://dm.626258.xyz/87654321|公益源2"
+        ],
+        "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json"
+      }
+    }
+  ]
+}
