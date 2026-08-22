@@ -197,6 +197,16 @@ def parse_js_fallback(text):
     return fields
 
 
+def is_drpy_lib(name):
+    """识别 drpy 系列依赖库（drpy2.min.js / quark.min.js / 依赖更新说明等）"""
+    if not name:
+        return False
+    n = name.lower()
+    if "drpy" in n or "quark" in n or "依赖更新" in n or "增加新特性" in n:
+        return True
+    return os.path.basename(n).startswith(("drpy", "quark"))
+
+
 def parse_js_spider(path, rel, rule_data):
     """组装 JS 爬虫的解析结果"""
     info = {
@@ -242,6 +252,8 @@ def parse_js_spider(path, rel, rule_data):
             info["note"] = "库文件（无爬虫特征）"
     if not info["name"]:
         info["name"] = os.path.basename(path)
+    if is_drpy_lib(info["name"]):
+        info["note"] = "drpy 依赖库"
     return info
 
 
@@ -485,13 +497,19 @@ def scan(root, exclude_files=()):
     return {"js": js_results, "py": py_results, "json": json_results}
 
 
+def is_lib_file(info):
+    """判断 JS 结果是否为库文件（无爬虫特征 / drpy 依赖库）"""
+    note = info.get("note", "")
+    return "库文件" in note or "依赖库" in note
+
+
 def summarize(results):
     js, py, jsons = results["js"], results["py"], results["json"]
-    js_lib = sum(1 for x in js if "库文件" in x.get("note", ""))
+    js_lib = sum(1 for x in js if is_lib_file(x))
     return {
         "js_total": len(js) - js_lib,
         "js_lib": js_lib,
-        "js_ok": sum(1 for x in js if x.get("ok") and "库文件" not in x.get("note", "")),
+        "js_ok": sum(1 for x in js if x.get("ok") and not is_lib_file(x)),
         "py_total": len(py),
         "json_total": len(jsons),
         "json_ok": sum(1 for x in jsons if x.get("ok")),
@@ -499,6 +517,33 @@ def summarize(results):
         "jar_spider_count": sum(1 for x in jsons if x.get("spider")),
         "py_spider_count": sum(1 for x in py if x.get("class")),
     }
+
+
+def dedup_js_spiders(results):
+    """按名称+host 对 JS 爬虫去重分组，返回分组索引"""
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for r in results["js"]:
+        if is_lib_file(r):
+            continue
+        key = (r.get("name") or os.path.basename(r["file"]), r.get("host") or "")
+        groups[key].append(r)
+    index = {}
+    for (name, host), refs in groups.items():
+        refs.sort(key=lambda x: x["file"])
+        gname = name
+        entry = index.get(gname)
+        if entry is None:
+            entry = {"name": name, "host_count": 0, "hosts": {}}
+            index[gname] = entry
+        entry["host_count"] += 1
+        entry["hosts"][host or "(动态)"] = {
+            "url": refs[0].get("url"),
+            "searchUrl": refs[0].get("searchUrl"),
+            "ref_count": len(refs),
+            "files": [x["file"] for x in refs],
+        }
+    return index
 
 
 def dedup_sites(results):
@@ -553,6 +598,8 @@ def main():
     ap.add_argument("--out", default=None, help="把完整报告保存为 JSON 文件")
     ap.add_argument("--sites-out", default=None,
                     help="把跨配置去重后的站点索引保存为 JSON 文件")
+    ap.add_argument("--js-index-out", default=None,
+                    help="把 JS 爬虫去重分组索引保存为 JSON 文件")
     args = ap.parse_args()
 
     root = args.dir
@@ -564,6 +611,10 @@ def main():
     excludes = [os.path.abspath(__file__)]
     if args.out:
         excludes.append(args.out)
+    if args.sites_out:
+        excludes.append(args.sites_out)
+    if args.js_index_out:
+        excludes.append(args.js_index_out)
     results = scan(root, excludes)
     summary = summarize(results)
 
@@ -595,7 +646,7 @@ def main():
             (r["file"], r["name"] or "", r["host"] or "",
              r["url"] or "", r["searchUrl"] or "")
             for r in results["js"]
-            if matches(r) and "库文件" not in r.get("note", "")
+            if matches(r) and not is_lib_file(r)
         ]
         if rows:
             sections.append(("JS 爬虫明细", ["文件", "名称", "host", "url", "搜索接口"], rows))
@@ -652,6 +703,17 @@ def main():
                        "sites": index}, f, ensure_ascii=False, indent=2)
         print("去重站点索引已保存: %s（唯一 %d 个，引用 %d 次）"
               % (os.path.abspath(args.sites_out), len(index), ref_total))
+
+    # ---- 保存 JS 爬虫去重索引 ----
+    if args.js_index_out:
+        index = dedup_js_spiders(results)
+        total_ref = sum(len(h["files"]) for g in index.values() for h in g["hosts"].values())
+        with open(args.js_index_out, "w", encoding="utf-8") as f:
+            json.dump({"unique_count": len(index),
+                       "ref_total": total_ref,
+                       "groups": index}, f, ensure_ascii=False, indent=2)
+        print("JS 爬虫去重索引已保存: %s（唯一 %d 组，副本引用 %d 份）"
+              % (os.path.abspath(args.js_index_out), len(index), total_ref))
 
 
 if __name__ == "__main__":

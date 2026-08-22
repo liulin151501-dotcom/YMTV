@@ -1,8 +1,8 @@
 {
   "summary": {
-    "js_total": 247,
-    "js_lib": 12,
-    "js_ok": 247,
+    "js_total": 220,
+    "js_lib": 39,
+    "js_ok": 220,
     "py_total": 132,
     "json_total": 417,
     "json_ok": 407,
@@ -218,7 +218,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "百晓生/js/采集之王.js",
@@ -647,7 +647,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "js/58动漫.js",
@@ -699,7 +699,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "神州/饭太硬/lib/虎牙.js",
@@ -751,7 +751,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "WebHomeTV/js/嗷呜动漫[漫].js",
@@ -894,7 +894,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/4khdr.js",
@@ -1050,7 +1050,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/blzb.js",
@@ -1076,7 +1076,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/douban.js",
@@ -1089,7 +1089,7 @@
         "type": null,
         "filterable": 1,
         "ok": true,
-        "note": ""
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/jp.js",
@@ -1141,7 +1141,7 @@
         "type": null,
         "filterable": 1,
         "ok": true,
-        "note": ""
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/drpy2.min.js",
@@ -1154,7 +1154,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/lib/aiqiyi.js",
@@ -1219,7 +1219,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/js/360影视.js",
@@ -1284,7 +1284,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【七星影视】/js/drpy2.min.js",
@@ -1297,7 +1297,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【喵影视线】/lib/drpy2.min.js",
@@ -1310,7 +1310,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【拾光线】/js/虎牙直播.js",
@@ -1609,7 +1609,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【VOX线路】/js/爱看资源网.js",
@@ -1908,7 +1908,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/小盒（极速版）/ext/5.js",
@@ -1934,7 +1934,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/小盒（极速版）/api/11.js",
@@ -1947,7 +1947,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/小盒（极速版）/api/29.js",
@@ -1960,7 +1960,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【PG线路】/lib/drpy2.min.js",
@@ -1973,7 +1973,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【PG线路】/js/4khdr.js",
@@ -2402,7 +2402,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/js/APPV2.js",
@@ -2506,7 +2506,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/js/采集之王.js",
@@ -2623,7 +2623,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【天微VIP线】/js/虎牙直播.js",
@@ -2753,7 +2753,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【香雅情线】/js/优酷.js",
@@ -2857,7 +2857,7 @@
         "type": null,
         "filterable": 1,
         "ok": true,
-        "note": ""
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【香雅情线】/api/drpy2.min.js",
@@ -2870,7 +2870,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【少儿教育】/js/优酷.js",
@@ -2935,7 +2935,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【小虎斑线】/js/腾腾.js",
@@ -3000,7 +3000,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/缘起【天神IY】/lib/drpy2.min.js",
@@ -3013,7 +3013,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【宫殿线路】/dr_py/libs/drpy2.min.js",
@@ -3026,7 +3026,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【宫殿线路】/dr_py/js/优酷.js",
@@ -3130,7 +3130,7 @@
         "type": null,
         "filterable": 1,
         "ok": true,
-        "note": ""
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【宫殿线路】/js/兔小贝.js",
@@ -3195,7 +3195,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【南风线路】/js/lib/drpy2.min.js",
@@ -3208,7 +3208,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【南风线路】/api/drpy2.min.js",
@@ -3221,7 +3221,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【潇洒线路】/JS/QKB.js",
@@ -3260,7 +3260,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "tvbox/本地【戏曲音乐】/js/酷奇MV.js",
@@ -3286,7 +3286,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "库文件（无爬虫特征）"
+        "note": "drpy 依赖库"
       },
       {
         "file": "不懂佬本地包/pmkbz/Easy/lib/apiv782apiv515drpy2.min.js",
@@ -3299,7 +3299,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "不懂佬本地包/pmkbz/Easy/lib/apiv1957drpy2.min.js",
@@ -3312,7 +3312,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       },
       {
         "file": "不懂佬本地包/pmkbz/Easy/lib/果果.js",
@@ -3377,7 +3377,7 @@
         "type": null,
         "filterable": null,
         "ok": true,
-        "note": "仅正则提取"
+        "note": "drpy 依赖库"
       }
     ],
     "py": [
